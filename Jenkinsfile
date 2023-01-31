@@ -7,9 +7,9 @@ pipeline{
                 git branch: 'master', url: 'https://github.com/puneethkumar02/BrownfieldAirlines.git'
             }
         }
-           stage('unit testing'){
+           stage('build'){
             steps{
-             sh 'mvn test'
+             sh 'mvn clean package'
             }
         }
     }
